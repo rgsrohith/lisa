@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="doctor-bg">
+  <!-- Blue Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">LISA Doctor Portal</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="user.html">User</a></li>
+      <li><a href="doctor.html">Doctor</a></li>
+    </ul>
+  </nav>
+
+  <!-- Doctor Dashboard -->
+  <section class="dashboard">
+    <div class="dashboard-content">
+      <h2>Doctor Dashboard</h2>
+      <p>Enter a User ID to fetch patient responses.</p>
+
+      <form id="fetchForm">
+        <input type="text" id="userId" placeholder="Enter User ID" required>
+        <button type="submit" class="btn">Fetch Data</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Popup Modal -->
+  <div id="resultsModal" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closeModal('resultsModal')">&times;</span>
+      <h3 id="modalTitle">Patient Responses</h3>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 LISA | Life-care Integrated Support Application</p>
+  </footer>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "flex";
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+
+    document.getElementById("fetchForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const userId = document.getElementById("userId").value.trim();
+      const modalBody = document.getElementById("modalBody");
+      const modalTitle = document.getElementById("modalTitle");
+
+      const sampleData = {
+        U12345: {
+          deaf: ["Q: Can you hear partially or fully impaired?", "A: Fully impaired",
+                 "Q: Do you use hearing aid?", "A: Yes"],
+          dumb: ["Q: Are you able to communicate with sign language?", "A: Yes",
+                 "Q: Do you require assistive devices?", "A: No"],
+          amnesia: ["Q: Do you recall recent events?", "A: Sometimes",
+                    "Q: Do you take memory medication?", "A: Yes"],
+          other: ["Q: Please specify condition", "A: Diabetes",
+                  "Q: Are you under medication?", "A: Yes"]
+        }
+      };
+
+      if(sampleData[userId]) {
+        modalTitle.innerText = `Patient Responses for ${userId}`;
+        modalBody.innerHTML = `
+          <div><strong>Deaf</strong><br>${sampleData[userId].deaf.join("<br>")}</div><br>
+          <div><strong>Dumb</strong><br>${sampleData[userId].dumb.join("<br>")}</div><br>
+          <div><strong>Amnesia</strong><br>${sampleData[userId].amnesia.join("<br>")}</div><br>
+          <div><strong>Other</strong><br>${sampleData[userId].other.join("<br>")}</div>
+        `;
+        openModal("resultsModal");
+      } else {
+        modalTitle.innerText = "Error";
+        modalBody.innerHTML = `<p style="color:#ff8080;">No data found for User ID: ${userId}</p>`;
+        openModal("resultsModal");
+      }
+    });
+  </script>
+</body>
+</html>

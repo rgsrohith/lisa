@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LISA Results</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: #111;
+      color: #fff;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      overflow-y: auto;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #222;
+      padding: 15px 30px;
+    }
+    .logo {
+      font-family: "Segoe UI", sans-serif;
+      font-size: 28px;
+      font-weight: bold;
+      color: #00c3ff;
+      letter-spacing: 2px;
+    }
+    .home-btn {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .home-btn:hover {
+      background: #0056b3;
+    }
+    .content {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .content h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+    .results {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+    .result-box {
+      background: #1c1c1c;
+      padding: 20px;
+      border-radius: 12px;
+      flex: 1;
+      min-width: 320px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+      text-align: center;
+    }
+    video {
+      width: 100%;
+      max-width: 480px;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+    .result-box h3 {
+      color: #00c3ff;
+      margin-bottom: 10px;
+    }
+
+    /* Report section */
+    .report {
+      background: #1a1a1a;
+      padding: 30px;
+      margin: 60px auto;
+      max-width: 1000px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+      text-align: left;
+    }
+    .report h3 {
+      color: #00c3ff;
+      margin-bottom: 20px;
+    }
+    .report table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    .report table th, .report table td {
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: left;
+    }
+    .report table th {
+      background: #222;
+      color: #00c3ff;
+    }
+    .summary {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    footer {
+      background: #222;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+    .contact {
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">LISA</div>
+    <button class="home-btn" onclick="location.href='index.html'">Home</button>
+  </header>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h2>Results & Analysis</h2>
+    <p>Your interaction data has been captured and processed. Below are visual results demonstrating the system in action.</p>
+
+    <div class="results">
+      <!-- First video -->
+      <div class="result-box">
+        <h3>Sign Language Recognition</h3>
+        <video controls>
+          <source src="53a804fe-f952-4bf0-a068-bc539464c086.avi" type="video/avi">
+          Your browser does not support the video tag.
+        </video>
+        <p>This video demonstrates how sign language gestures are captured and analyzed for accurate communication.</p>
+      </div>
+
+      <!-- Second video -->
+      <div class="result-box">
+        <h3>Lip Reading & Translation</h3>
+        <video controls>
+          <source src="ded735a9-8547-443b-8820-10ab8b54dc7c.avi" type="video/avi">
+          Your browser does not support the video tag.
+        </video>
+        <p>This shows lip movement recognition translated into audio and text, enabling seamless interaction.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Report Section -->
+  <div class="report">
+    <h3>Session Report – Patient ID: U12345</h3>
+    <table>
+      <tr>
+        <th>Category</th>
+        <th>Details</th>
+      </tr>
+      <tr>
+        <td>Selected Method</td>
+        <td>Smart Glass</td>
+      </tr>
+      <tr>
+        <td>Session Duration</td>
+        <td>15 minutes</td>
+      </tr>
+      <tr>
+        <td>Accuracy Achieved</td>
+        <td>92%</td>
+      </tr>
+      <tr>
+        <td>Issues Detected</td>
+        <td>Minor misinterpretation in 2 gestures</td>
+      </tr>
+      <tr>
+        <td>Doctor Review Status</td>
+        <td>Pending</td>
+      </tr>
+    </table>
+    <div class="summary">
+      <strong>Summary:</strong> The system successfully captured sign language and lip movements with high accuracy. 
+      Data has been logged for further analysis by the doctor. With continued usage, the solution will 
+      provide adaptive improvements and personalized recommendations.
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="contact">
+      Contact us: <a href="mailto:rgsrohith.be@gmail.com" style="color:#00c3ff;">rgsrohith.be@gmail.com</a>
+    </div>
+    Life-care Integrated Support Application
+  </footer>
+
+</body>
+</html>

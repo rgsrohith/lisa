@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="user-bg">
+  <div class="overlay"></div>
+
+  <div class="dashboard-container">
+    <h2>User Dashboard - ID: U12345</h2>
+    <h3>Select Your Medical Issue</h3>
+
+    <div class="issue-grid">
+      <div class="issue-card" onclick="chooseIssue('deaf', this)">
+        <div class="issue-icon">👂</div>
+        <h4>Deaf</h4>
+        <p>Support for hearing difficulties</p>
+      </div>
+      <div class="issue-card" onclick="chooseIssue('dumb', this)">
+        <div class="issue-icon">🗣️</div>
+        <h4>Dumb</h4>
+        <p>Assistance for speech impairment</p>
+      </div>
+      <div class="issue-card" onclick="chooseIssue('amnesia', this)">
+        <div class="issue-icon">🧠</div>
+        <h4>Amnesia</h4>
+        <p>Memory-related support</p>
+      </div>
+      <div class="issue-card" onclick="chooseIssue('other', this)">
+        <div class="issue-icon">💡</div>
+        <h4>Other</h4>
+        <p>General medical assistance</p>
+      </div>
+    </div>
+
+    <button class="btn-back" onclick="window.history.back()">← Back</button>
+  </div>
+
+  <!-- Popup Form -->
+  <div id="issuePopup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h3 id="popupTitle"></h3>
+      <form id="issueForm" onsubmit="submitIssue(event)">
+        <div id="formQuestions"></div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    let currentIssue = "";
+    let issueChosen = false;
+
+    const questions = {
+      deaf: [
+        "Do you currently use a hearing aid?",
+        "Do you experience ringing in your ears?",
+        "Would you like information on sign language training?"
+      ],
+      dumb: [
+        "Do you currently use speech therapy?",
+        "Do you experience partial or complete speech loss?",
+        "Would you like information on speech therapy resources?"
+      ],
+      amnesia: [
+        "Do you forget recent events more?",
+        "Do you need assistance with reminders?",
+        "Would you like to connect with a memory specialist?"
+      ],
+      other: [
+        "Are you currently on any medications?",
+        "Have you consulted a doctor for this issue?",
+        "Would you like us to connect you with a specialist?"
+      ]
+    };
+
+    function chooseIssue(issue, element) {
+      if (issueChosen) return; // ✅ stop multiple selections
+      issueChosen = true;
+      currentIssue = issue;
+
+      // disable other cards
+      document.querySelectorAll('.issue-card').forEach(card => {
+        if (card !== element) {
+          card.style.opacity = "0.4";
+          card.style.pointerEvents = "none";
+        }
+      });
+
+      openPopup(issue);
+    }
+
+    function openPopup(issue) {
+      document.getElementById("issuePopup").style.display = "flex";
+      document.getElementById("popupTitle").innerText = issue.toUpperCase() + " Support";
+
+      const formDiv = document.getElementById("formQuestions");
+      formDiv.innerHTML = "";
+
+      questions[issue].forEach((q, i) => {
+        const label = document.createElement("label");
+        label.innerText = (i+1) + ". " + q;
+
+        const select = document.createElement("select");
+        select.required = true;
+        select.innerHTML = `
+          <option value="">--Select--</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        `;
+
+        formDiv.appendChild(label);
+        formDiv.appendChild(select);
+      });
+    }
+
+    function closePopup() {
+      document.getElementById("issuePopup").style.display = "none";
+    }
+
+    function submitIssue(event) {
+      event.preventDefault();
+      window.location.href = "solution.html?issue=" + currentIssue;
+    }
+  </script>
+  
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 LISA | Life-care Integrated Support Application</p>
+    <p>📧 rgsrohith.skills@gmail.com | 📞 8148507642</p>
+  </footer>
+  
+</body>
+</html>

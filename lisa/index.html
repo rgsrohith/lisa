@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LISA - Life-care Integrated Support Application</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">LISA</h1>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#" onclick="showPopup('login')">Login</a></li>
+        <li><a href="#" onclick="showPopup('signin')">Signin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Your Life, Our Passion</h2>
+      <p>Welcome to LISA — your trusted partner for smarter, safer, and simpler healthcare. From finding doctors to booking appointments, we make healthcare more accessible and effortless for you</p>
+    </div>
+  </section>
+
+  <!-- Quick Actions -->
+  <section class="quick-actions">
+    <div class="action-card">
+      <i class="fa-solid fa-hospital"></i>
+      <p>Find a Care Location</p>
+    </div>
+    <div class="action-card">
+      <i class="fa-solid fa-user-doctor"></i>
+      <p>Find a Doctor</p>
+    </div>
+    <div class="action-card" onclick="showPopup('appointment')">
+      <i class="fa-solid fa-calendar-check"></i>
+      <p>Schedule an Appointment</p>
+    </div>
+    <div class="action-card">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Learn About Our Services</p>
+    </div>
+  </section>
+
+  <!-- Login Popup -->
+  <div class="popup" id="login">
+    <div class="popup-content">
+      <button class="close" onclick="closePopup('login')">&times;</button>
+      <h3>🔐 Login</h3>
+      <input type="email" id="loginEmail" placeholder="Email">
+      <input type="password" id="loginPass" placeholder="Password">
+      <button class="btn" onclick="login()">Login</button>
+    </div>
+  </div>
+
+  <!-- Signin Popup -->
+  <div class="popup" id="signin">
+    <div class="popup-content">
+      <button class="close" onclick="closePopup('signin')">&times;</button>
+      <h3>🆕 Create Account</h3>
+      <input type="text" id="signinName" placeholder="Full Name">
+      <input type="email" id="signinEmail" placeholder="Email">
+      <input type="password" id="signinPass" placeholder="Password">
+      <button class="btn" onclick="signin()">Sign up</button>
+    </div>
+  </div>
+
+  <!-- Role Selection Popup -->
+  <div class="popup" id="role">
+    <div class="popup-content">
+      <button class="close" onclick="closePopup('role')">&times;</button>
+      <h3>Select Role</h3>
+      <label><input type="radio" name="role" value="User"> User</label>
+      <label><input type="radio" name="role" value="Doctor"> Doctor</label>
+      <button class="btn" onclick="submitRole()">Continue</button>
+    </div>
+  </div>
+
+  <!-- Appointment Popup -->
+  <div class="popup" id="appointment">
+    <div class="popup-content">
+      <button class="close" onclick="closePopup('appointment')">&times;</button>
+      <h3>📅 Schedule Appointment</h3>
+      <input type="text" id="patientName" placeholder="Your Name">
+      <select id="doctorSelect">
+        <option>Dr. Smith - Cardiologist</option>
+        <option>Dr. John - Neurologist</option>
+        <option>Dr. Meera - ENT Specialist</option>
+        <option>Dr. Raj - General Physician</option>
+      </select>
+      <input type="date" id="apptDate">
+      <input type="time" id="apptTime">
+      <button class="btn" onclick="bookAppointment()">Book Now</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 LISA | Life-care Integrated Support Application</p>
+    <p>📧 rgsrohith.skills@gmail.com | 📞 8148507642</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
