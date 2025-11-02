@@ -1,49 +1,58 @@
 # 🤖 LISA: Lip and Sign Assistant
 
-## ✨ About the Project
+## ✨ About the Project: Accessibility Focus
 
-LISA is a web application currently in development, aiming to be an **accessibility tool** for the Deaf and hard-of-hearing communities. The goal is to provide a comprehensive resource for **Sign Language** education and **Lip-Reading** practice.
+LISA is a **static web prototype** dedicated to improving accessibility for the Deaf and hard-of-hearing communities. It's a personal educational project currently under active development.
 
-This is a personal project built for educational purposes and is under active construction!
+The core objective is to create a comprehensive resource for **Sign Language education** and **Lip-Reading practice**.
 
 ---
 
-## 🚀 Current Status & Features
+## 🎥 Project Demonstration
 
-This project is a **static website prototype**. Future plans include integrating video recognition libraries.
+Check out a quick tour of the current prototype's design and interactive features:
 
-* **Core Feature:** Interactive pages for learning basic sign language phrases.
-* **Module:** A structured area for lip-reading practice.
-* **Design:** A responsive, mobile-friendly interface using modern CSS.
+<div align="center">
+  <a href="[Your Public Video URL Here]" target="_blank">
+    <img src="https://img.shields.io/badge/Watch%20Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="LISA Project Demo Video Link" />
+  </a>
+</div>
+
+---
+
+## 🚀 Current Features & Future Vision
+
+* **Current Status:** A responsive, mobile-friendly **static website prototype**.
+* **Core Features:** Interactive pages designed for learning basic sign language phrases and structured modules for lip-reading practice.
+* **Future Plans:** Integration of **Video Recognition** and computer vision libraries for real-time sign language interpretation.
 
 ---
 
 ## 🛠️ Tech Stack
 
-Built entirely with core web technologies:
+LISA is built using fundamental web technologies:
 
 * **HTML5**
-* **CSS3**
-* **JavaScript (Vanilla JS)**
+* **CSS3** (Responsive Design)
+* **JavaScript** (Vanilla JS)
 
 ---
 
 ## 🏃 Getting Started
 
-To run this project locally, you don't need any special server or dependencies.
+To explore the static prototype locally:
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/](https://github.com/)[Your GitHub Username]/lisa-assistant.git
-    ```
-2.  **Open the file:**
-    Simply open the `index.html` file in your preferred web browser.
+1.  **Clone the repository:**
+    ```bash
+    git clone [[https://github.com/Your_GitHub_Username/lisa-assistant.git](https://github.com/Your_GitHub_Username/lisa-assistant.git)]
+    ```
+2.  **Run:**
+    Simply open the **`index.html`** file in your web browser.
 
 ---
 
 ## 🤝 Contribution & Contact
 
-Feedback and ideas are always welcome!
+Feedback and development ideas are welcome!
 
-* **Contact:** [Your Email Address]
-* **License:** MIT (See `LICENSE` file for details)
+* **Contact:** [rgsrohith.be@gmail.com]
