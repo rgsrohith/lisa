@@ -2,19 +2,19 @@
 
 ## ✨ About the Project: Accessibility Focus
 
-LISA is a **static web prototype** dedicated to improving accessibility for the Deaf and hard-of-hearing communities. It's a personal educational project currently under active development.
+LISA is a **static web prototype** dedicated to improving accessibility for the Deaf and hard-of-hearing communities. It is a personal educational project currently under active development.
 
 The core objective is to create a comprehensive resource for **Sign Language education** and **Lip-Reading practice**.
 
 ---
 
-## 🎥 Project Demonstration
+## 🎥 Project Demonstration (Video Link)
 
-Check out a quick tour of the current prototype's design and interactive features:
+Watch a brief demonstration of the current prototype's design and interactive features.
 
 <div align="center">
-  <a href="[Your Public Video URL Here]" target="_blank">
-    <img src="https://img.shields.io/badge/Watch%20Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="LISA Project Demo Video Link" />
+  <a href="./lisa output.mp4" target="_blank">
+    <img src="https://img.shields.io/badge/Watch%20Demo-FF0000?style=for-the-badge&logo=film&logoColor=white" alt="LISA Project Demo Video Link" />
   </a>
 </div>
 
@@ -55,4 +55,4 @@ To explore the static prototype locally:
 
 Feedback and development ideas are welcome!
 
-* **Contact:** [rgsrohith.be@gmail.com]
+* **Contact:** rgsrohith.be@gmail.com
